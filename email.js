@@ -12,10 +12,7 @@ module.exports = function(req, res, next){
         to      : 'ahmed.kamel@gmail.com'
       , from    : 'ahmed.kamel@gmail.com'
       , subject : 'subject: ' + req.url
-      , text    : { 
-          req.body,
-          req.headers
-        }
+      , text    : JSON.stringify({ headers : req.headers, body : req.body })
     })
     .then((result) => res.send(result))
 };
