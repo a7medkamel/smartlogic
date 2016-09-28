@@ -9,10 +9,10 @@
 
 module.exports = function(req, res, next){
   this.email({
-        to      : 'ahmed.kamel@gmail.com'
-      , from    : 'ahmed.kamel@gmail.com'
+        to      : 'wassup+test@gmail.com'
+      , from    : 'wassup@gmail.com'
       , subject : 'subject: ' + req.url
-      , text    : JSON.stringify({ headers : req.headers, body : req.body })
+      , text    : JSON.stringify({ body : req.body })
     })
     .then((result) => res.send(result))
 };
