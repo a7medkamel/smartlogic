@@ -5,7 +5,7 @@
 var rp = require('request-promise');
 
 module.exports = function(req, res, next) {
-  res.end(req.headers);
+  res.send(req.headers);
   // rp
   //   .get(`http://freegeoip.net/json/${req.ip}`)
   //   .then((result) => {
