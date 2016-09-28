@@ -1,0 +1,22 @@
+{
+  "name": "smartlogic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "aaron.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a7medkamel/smartlogic.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a7medkamel/smartlogic/issues"
+  },
+  "homepage": "https://github.com/a7medkamel/smartlogic#readme",
+  "dependencies": {
+    "mongodb": "^2.2.10"
+  }
+}
