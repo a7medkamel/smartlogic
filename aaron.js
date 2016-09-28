@@ -14,7 +14,7 @@ module.exports = function(req, res, next){
   };
   var bodyVal = req.body;
   if (bodyVal.value == "invalid") {
-    result.value = false;
+    result.valid = false;
     result.message = "Supply a valid value";
   }
   res.send(result);
