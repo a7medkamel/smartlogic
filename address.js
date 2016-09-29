@@ -13,13 +13,12 @@ var _ = require('lodash')
 module.exports = function(req, res, next){
   let tabs = _.get(req.body, 'tabs');
   
-  let address_line1   = _.find(tabs, (o) => { return o.label == 'address_line1'; })
-    , address_city    = _.find(tabs, (o) => { return o.label == 'address_city'; })
-    , address_state   = _.find(tabs, (o) => { return o.label == 'address_state'; })
-    , address_zip     = _.find(tabs, (o) => { return o.label == 'address_zip'; })
+  let address_line1   = _.get(_.find(tabs, (o) => { return o.label == 'address_line1'; }), 'value')
+    , address_city    = _.get(_.find(tabs, (o) => { return o.label == 'address_city'; }), 'value')
+    , address_state   = _.get(_.find(tabs, (o) => { return o.label == 'address_state'; }), 'value')
+    , address_zip     = _.get(_.find(tabs, (o) => { return o.label == 'address_zip'; }), 'value')
     ;
     
-  console.log(typeof req.body, tabs, address_line1, address_city, address_state, address_zip)
   Lob.verification.verify({
     address_line1   : address_line1,
     address_city    : address_city,
