@@ -23,7 +23,7 @@ module.exports = function(req, res, next) {
     db.collection('Account').findOne({ AccountName : account_name }, function(err, account) {
       res.send({
         valid: account !== null,
-        message: 'Account name not found in database',
+        message: `Account "${account_name}" not found in database`,
         model: account
       });
       db.close();
