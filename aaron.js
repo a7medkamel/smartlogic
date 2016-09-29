@@ -8,6 +8,18 @@
 */
 
 module.exports = function(req, res, next){
+  var result = { 
+    message: 'Valid', 
+    valid: true 
+  };
+  var bodyVal = req.body;
+  if (bodyVal.value == "invalid") {
+    result.valid = false;
+    result.message = "Supply a valid value";
+  }
+  res.send(result);
+
+  /*
   this.email({
         to      : 'aaron.wald@docusign.com'
       , from    : 'aaron.wald@docusign.com'
@@ -15,4 +27,5 @@ module.exports = function(req, res, next){
       , text    : JSON.stringify({ headers : req.headers, body : req.body })
     })
     .then((result) => res.send(result))
+    */
 };
