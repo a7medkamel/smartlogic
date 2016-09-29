@@ -9,9 +9,8 @@ module.exports = function(req, res, next){
     address_city: 'San Francisco',
     address_state: 'CA',
     address_zip: '94107'
-  }, function (err, res) {
-    console.log (err, res);
-    res.send(res);
+  }, function (err, result) {
+    res.send(result);
   });
 };
 
