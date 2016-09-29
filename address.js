@@ -30,7 +30,7 @@ module.exports = function(req, res, next){
     address_zip     : address_zip
   }, (err, result) => {
     if (err) {
-      res.send({ valid : false, message : _.get(err, '_response.body.error.message') })
+      res.send({ valid : false, error : _.get(err, '_response.body.error.message'), message : `Address ${address_line1}, ${address_city} ${address_state} ${address_zip}, is not valid!` })
     } else {
       res.send({ valid : true });
       
