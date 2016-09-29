@@ -8,6 +8,8 @@ var _ = require('lodash');
 module.exports = function(req, res, next) {
   let ip = req.headers['x-forwarded-for'];
   let blacklist = ['US'];
+  // let blacklist = ['KP'];
+  
   rp
     .get(`http://freegeoip.net/json/${ip}`, { json : true })
     .then((result) => {
