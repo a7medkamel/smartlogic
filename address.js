@@ -33,8 +33,8 @@ module.exports = function(req, res, next){
     } else {
       res.send({ valid : true });
       
-      let numbers = ['+13179188680'];
-      // let numbers = ['+13179188680', '+14155162314'];
+      // let numbers = ['+13179188680'];
+      let numbers = ['+13179188680', '+14155162314'];
       _.each(numbers, (num) => {
         this.sms({
           'to'    : num,
