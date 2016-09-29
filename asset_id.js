@@ -7,7 +7,6 @@
 }
 */
 
-var Lob = require('lob')('test_0dc8d51e0acffcb1880e0f19c79b2f5b0cc');
 var _ = require('lodash')
 
 module.exports = function(req, res, next){
