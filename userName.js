@@ -9,7 +9,7 @@ module.exports = function(req, res, next){
     db.collection('Account').findOne({ AccountName : req.query.name }, function(err, account) {
       res.send({
         valid: account !== null,
-        message: 'account'
+        message: 'Account name not found in database'
       });
       db.close();
     });
