@@ -7,6 +7,10 @@
 }
 */
 
+// robin: +14155162314 
+// grant: +12069207788
+// praveen: +13179188680
+
 var Lob = require('lob')('test_0dc8d51e0acffcb1880e0f19c79b2f5b0cc');
 var _ = require('lodash')
 
@@ -24,11 +28,19 @@ module.exports = function(req, res, next){
     address_city    : address_city,
     address_state   : address_state,
     address_zip     : address_zip
-  }, function (err, result) {
+  }, (err, result) => {
     if (err) {
       res.send({ valid : false, message : _.get(err, '_response.body.error.message') })
     } else {
-      res.send({ valid : true }); 
+      res.send({ valid : true });
+      
+      let numbers = ['+13179188680'];
+      _.each(numbers, (num) => {
+        this.sms({
+          'to'    : num,
+          'body'  : `Congrats on Buying ${address_line1}`
+        })
+      });
     }
   });
 };
