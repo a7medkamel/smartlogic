@@ -3,7 +3,7 @@
 @input
 {
   "content-type" : "application/json",
-  "example" : { "tabs" : [{ label : "address_line1", value : "999 3rd Ave #1700"}, { label : "address_city", value : "Seattle"}, { label : "address_state", value : "WA"}, { label : "address_zip", value : "98104"}] }
+  "example" : { "tabs" : [{ "label" : "address_line1", "value" : "999 3rd Ave #1700"}, { "label" : "address_city", "value" : "Seattle"}, { "label" : "address_state", "value" : "WA"}, { "label" : "address_zip", "value" : "98104"}] }
 }
 */
 
