@@ -17,6 +17,6 @@ module.exports = function(req, res, next){
   if (asset_id == "123") {
     res.send({ valid : true }); 
   } else {
-    res.send({ valid : false, message : 'Did you mean 123?' })
+    res.send({ valid : false, message : 'Did you mean 123?', asset_id : asset_id })
   }
 };
