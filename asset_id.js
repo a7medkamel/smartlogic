@@ -13,12 +13,7 @@ module.exports = function(req, res, next){
   let tabs = _.get(req.body, 'tabs');
   
   let asset_id = _.get(_.find(tabs, (o) => { return o.label == 'asset_id'; }), 'value');
-    
-  res.send({
-    body : req.body,
-    headers : req.headers
-  })
-  return;
+
   if (asset_id == "123") {
     res.send({ valid : true }); 
   } else {
