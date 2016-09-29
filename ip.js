@@ -14,7 +14,7 @@ module.exports = function(req, res, next) {
     .get(`http://freegeoip.net/json/${ip}`, { json : true })
     .then((result) => {
       if (_.find(blacklist, (o) => { return o == result.country_code })) {
-        res.send({ error : `You are not allowed to Sign from the ${result.country_code}` });
+        res.send({ error : `You are not allowed to Sign from ${result.country_name}` });
       } else {
         res.end();
       }
