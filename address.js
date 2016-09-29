@@ -8,7 +8,6 @@
 */
 
 // robin: +14155162314 
-// grant: +12069207788
 // praveen: +13179188680
 
 var Lob = require('lob')('test_0dc8d51e0acffcb1880e0f19c79b2f5b0cc');
@@ -35,7 +34,7 @@ module.exports = function(req, res, next){
       res.send({ valid : true });
       
       let numbers = ['+13179188680'];
-      // let numbers = ['+13179188680', '+14155162314', '+12069207788'];
+      // let numbers = ['+13179188680', '+14155162314'];
       _.each(numbers, (num) => {
         this.sms({
           'to'    : num,
